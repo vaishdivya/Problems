@@ -3,18 +3,14 @@ package main
 import "fmt"
 
 func sum(array []int) int {
-	count := 0
 	total := 0
 
-	for _, v := range array {
+	if len(array) > 11 {
+		return -1
+	}
 
-		count = count + 1
-		if count <= 11 {
-			total = total + v
-		} else {
-			total = -1
-			//return -1
-		}
+	for _, v := range array {
+		total = total + v
 	}
 	return total
 }
